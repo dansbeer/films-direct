@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\FilmsController;
+use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -13,6 +15,16 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+
+Route::post('/register', [UserController::class, 'store']);
+
+
+
+Route::get('/getuser', [UserController::class, 'getUser']);
+// FILMS
+Route::get('/getfilms', [FilmsController::class, 'index']);
+Route::post('/createfilms', [FilmsController::class, 'store']);
+Route::post('/updatefilms/{id}', [FilmsController::class, 'update']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();

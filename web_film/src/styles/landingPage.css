@@ -18,3 +18,20 @@
     text-shadow: 3px 3px black;
     letter-spacing: 4px;
 }
+
+.trending {
+    height: auto;
+    background-image: url("../assets/images/bg/scifi.jpg");
+    background-size: cover;
+}
+
+.movieImage {
+    height: auto;
+    background-color: dark;
+    padding: 5px;
+    margin: 5px;
+}
+
+.images {
+    height: 50px;
+}
