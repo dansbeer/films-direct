@@ -1,8 +1,15 @@
 .myBG {
-    height: 100vh;
-    background-image: url('../assets/images/bg/main.jpg');
+    background-image: url("../assets/images/bg/main.jpg");
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     background-size: cover;
+    /* font-size: calc(10px + 2vmin); */
+    color: white;
 }
+/* .navBar {
+    background-color: #282c34;
+} */
 
 .intro {
     height: 300px;

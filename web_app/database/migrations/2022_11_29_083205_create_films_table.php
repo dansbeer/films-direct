@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('description')->nullable();
             $table->text('sinopsis')->nullable();
             $table->text('image')->nullable();
+            $table->string('category')->nullable()->references('id')->on('categories')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

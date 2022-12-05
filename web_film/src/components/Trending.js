@@ -6,17 +6,18 @@ const Trending = () => {
     <Container>
       <h1 className="text-white">TRENDING</h1>
       <Row>
-        <Col>
+        <Col md={4}>
           <Card className="movieImage">
             <Image
-              md={4}
               src={duneImage}
               alt="Dune Movies"
               className="text-white image"
             />
             <div className="bg-dark">
               <div className="p2 m-1 text-white">
-                <Card.Title>DUNE</Card.Title>
+                <Card.Title className="flex justify-center text-center">
+                  DUNE
+                </Card.Title>
                 <Card.Text>
                   This is a wider card with supporting text below as a natural
                 </Card.Text>

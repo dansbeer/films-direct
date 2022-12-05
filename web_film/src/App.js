@@ -1,21 +1,20 @@
 import "./App.css";
-import NavigationBar from "./components/NavigationBar";
 import Intro from "./components/Intro";
 import "./styles/landingPage.css";
 import Trending from "./components/Trending";
+import { Routes, Route } from "react-router-dom";
+import Login from "./components/Login";
 
 function App() {
   return (
-    <div>
-      <div className="myBG">
-        <NavigationBar />
-        <Intro />
-      </div>
-      <div className="trending">
-        <Trending />
-      </div>
-      <div></div>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Intro />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+      {/* <Trending /> */}
+      <div className="trending"></div>
+    </>
   );
 }
 

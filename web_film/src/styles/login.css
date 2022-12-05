@@ -1,0 +1,25 @@
+.login-page{
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    /* font-size: calc(10px + 2vmin); */
+    color: white;
+}
+
+.login-title{
+    font-size: 45px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 3px, 5px, black;
+}
+
+.login-input{
+    background-color: rgba(230, 218, 218, 0.089);
+    margin: 10px;
+    padding: 60px;
+    border-radius: 10px;
+}

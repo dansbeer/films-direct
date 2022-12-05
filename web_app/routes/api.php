@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\FilmsController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
@@ -21,6 +22,11 @@ Route::post('/register', [UserController::class, 'store']);
 
 
 Route::get('/getuser', [UserController::class, 'getUser']);
+// CATEGORY
+Route::get('/getcategory', [CategoryController::class, 'index']);
+Route::post('/createcategory', [CategoryController::class, 'store']);
+Route::post('/updatecategory/{id}', [CategoryController::class, 'update']);
+
 // FILMS
 Route::get('/getfilms', [FilmsController::class, 'index']);
 Route::post('/createfilms', [FilmsController::class, 'store']);

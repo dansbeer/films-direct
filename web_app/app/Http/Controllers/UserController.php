@@ -42,12 +42,21 @@ class UserController extends Controller
         //     'email' => 'required',
         //     'password' => 'required'
         // ]);
+        $request->validate([
+            'image' => 'mimes:jpg, jpeg, png'
+        ]);
+
+        $folder = 'user_images';
+        $image = $request->file('image');
+        $imageName = time() . "_" . $image->getClientOriginalName();
+        $image->move($folder, $imageName);
 
         return User::create([
             'name' => $request->name,
             'username' => $request->username,
             'email' => $request->email,
-            'password' => $request->password
+            'password' => $request->password,
+            'image' => $imageName
         ]);
     }
 
